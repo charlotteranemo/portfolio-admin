@@ -1,0 +1,76 @@
+@import 'reset';
+@import 'base';
+
+body {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid $lighterBaseColor;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#courseForm, #workForm, #websiteForm {
+    display: none;
+    input {
+        width: 50%;
+    }
+}
+
+.button, .smallBtn {
+    @include button;
+}
+
+#updateBtn {
+    button {
+        @include button;
+        border: 1px solid $accentColor;
+        width: 50%;
+    }
+}
+
+input {
+    border: 1px solid $accentColor;
+    margin-bottom: 10px;
+}
+
+#btnForm {
+    border-bottom: 1px solid $lighterBaseColor;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#logoutBtn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20vw;
+}
+
+td {
+    border-bottom: 1px solid $lighterBaseColor;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1260px) {
+    #btnForm {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        width: 85%;
+    }
+
+    #logoutBtn {
+        position: fixed;
+        right: 5vw;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    td {
+        display: flex;
+    }
+}

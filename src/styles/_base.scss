@@ -1,0 +1,38 @@
+//Variables
+
+$baseColor: #5C2D44;
+$textColor: #404040;
+$accentColor: rgb(84, 141, 84);
+$lighterBaseColor: lighten($baseColor, 20);
+$lighterAccentColor: lighten($accentColor, 20);
+$textColor: #303030;
+
+$largeFont: montserrat, sans-serif;
+$navFont: tamarillo-jf, sans-serif;
+$pFont: iskra, sans-serif;
+$hFont: 'Poppins', sans-serif;
+
+//Fonts
+
+h1 {
+    font: 1.6em $hFont;
+    color: $textColor;
+}
+
+h2 {
+    font: 1.2em $hFont;
+    color: $textColor;
+}
+
+p, a, label, input, button, td {
+    font: 1.1em $pFont;
+    color: $textColor;
+}
+
+//Mixins
+
+@mixin button {
+    background-color: lighten($textColor, 45);
+    padding: 5px;
+    padding-top: 2px;
+}

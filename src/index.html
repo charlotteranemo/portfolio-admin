@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte Ranemo - Admin</title>
+    <link rel="stylesheet" href="https://use.typekit.net/aoh0hlj.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form id="loginForm" onsubmit="login()">
+        <h1>Login</h1>
+        <label for="user">Username:</label><br />
+        <input type="text" name="user" id="user"><br/>
+        <label for="pass">Password: </label><br />
+        <input type="password" name="pass" id="pass"><br />
+        <input type="submit" value="Log in" class="button">
+    </form>
+    <button onclick="logout()" class="button" id="logoutBtn">Log out</button>
+    <form id="btnForm"><!--Form for deciding what to change/add-->
+        <h1>What category do you want to make changes to?</h1>
+        <input type="radio" name="choice" value="course" id="course">
+        <label for="course">Course</label><br/>
+        <input type="radio" name="choice" value="work" id="work">
+        <label for="work">Work</label><br/>
+        <input type="radio" name="choice" value="website" id="website">
+        <label for="website">Website</label><br/>
+    </form>
+    <form onsubmit="addCourse()" id="courseForm">
+        <h1>Add or update a course</h1>
+        <label for="courseName">Course name: </label><br />
+        <input type="text" name="name" id="courseName"><br />
+        <label for="courseStart">Start date: </label><br />
+        <input type="text" name="start" id="courseStart"><br />
+        <label for="courseEnd">End date: </label><br />
+        <input type="text" name="end" id="courseEnd"><br />
+        <label for="school">School: </label><br />
+        <input type="text" name="school" id="school"><br />
+        <input type="submit" value="Add course" class="button">
+    </form>
+    <form onsubmit="addWork()" id="workForm">
+        <h1>Add or update a workplace</h1>
+        <label for="workName">Workplace name: </label><br />
+        <input type="text" name="name" id="workName"><br />
+        <label for="workStart">Start date: </label><br />
+        <input type="text" name="start" id="workStart"><br />
+        <label for="workEnd">End date: </label><br />
+        <input type="text" name="end" id="workEnd"><br />
+        <label for="title">Title: </label><br />
+        <input type="text" name="title" id="title"><br />
+        <input type="submit" value="Add work" class="button">
+    </form>
+    <form onsubmit="addWebsite()" id="websiteForm">
+        <h1>Add or update a website</h1>
+        <label for="webName">Website name: </label><br />
+        <input type="text" name="name" id="webName"><br />
+        <label for="url">Url: </label><br />
+        <input type="text" name="url" id="url"><br />
+        <label for="description">Description: </label><br />
+        <input type="text" name="description" id="description"><br />
+        <label for="img">Image: </label><br />
+        <input type="text" name="img" id="img"><br />
+        <input type="submit" value="Add website" class="button">
+    </form>
+    <div id="updateBtn"></div>
+    <table><!--The list for work/websites/courses already added-->
+        <tbody id="list">
+        </tbody>
+    </table>
+</body>
+</html>
