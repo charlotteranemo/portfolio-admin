@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   devServer: {
     contentBase: './dist',
@@ -44,7 +44,6 @@ module.exports = {
       },
       {
         test: /\.m?js$/,
-        include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
